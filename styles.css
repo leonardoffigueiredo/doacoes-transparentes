@@ -1,0 +1,509 @@
+/* Variáveis CSS */
+:root {
+  --primary-color: #4caf50;
+  --secondary-color: #ffa500;
+  --text-color: #333;
+  --bg-color: #f4f4f4;
+  --card-bg: #fff;
+  --header-bg: #4caf50;
+  --footer-bg: #333;
+  --transition-speed: 0.3s;
+  --border-radius: 10px;
+}
+
+/* Modo escuro */
+.dark-mode {
+  --primary-color: #66bb6a;
+  --secondary-color: #ffd54f;
+  --text-color: #f4f4f4;
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --header-bg: #1e1e1e;
+  --footer-bg: #0a0a0a;
+}
+
+/* Estilos gerais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Cabeçalho */
+header {
+  background-color: var(--header-bg);
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 2rem;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color var(--transition-speed) ease;
+}
+
+nav ul li a:hover {
+  color: #e0e0e0;
+}
+
+.btn-doar {
+  background-color: var(--secondary-color);
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  transition: background-color var(--transition-speed) ease;
+}
+
+.btn-doar:hover {
+  background-color: #ff8c00;
+}
+
+/* Hero Section */
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: white;
+  padding: 15px 30px;
+  border-radius: var(--border-radius);
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color var(--transition-speed) ease;
+}
+
+.cta-button:hover {
+  background-color: #ff8c00;
+}
+
+/* Conteúdo principal */
+main {
+  padding: 80px 0;
+}
+
+section {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  margin-bottom: 60px;
+}
+
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+/* Estatísticas */
+.estatisticas {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.estatistica {
+  flex: 1;
+  min-width: 200px;
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed) ease;
+}
+
+.estatistica:hover {
+  transform: translateY(-5px);
+}
+
+.estatistica i {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.estatistica span {
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Lista de instituições */
+.grid-instituicoes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.instituicao {
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 30px;
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.instituicao:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.instituicao img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 20px;
+}
+
+/* Gráficos */
+.graficos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.grafico {
+  flex: 1;
+  min-width: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.instituicao button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.instituicao button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+.instituicao button:active {
+  transform: translateY(0);
+}
+
+/* Histórias de impacto */
+.grid-historias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.historia {
+  background-color: var(--card-bg);
+  border-left: 5px solid var(--primary-color);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-speed) ease;
+}
+
+.historia:hover {
+  transform: translateY(-5px);
+}
+
+/* Formulário de doação */
+#form-doacao {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--footer-bg);
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.social-media a {
+  color: white;
+  font-size: 1.8rem;
+  margin: 0 15px;
+  transition: color var(--transition-speed) ease;
+}
+
+.social-media a:hover {
+  color: var(--primary-color);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .estatisticas {
+    flex-direction: column;
+  }
+
+  .estatistica {
+    margin-bottom: 30px;
+  }
+
+  .graficos {
+    flex-direction: column;
+  }
+
+  .grafico {
+    margin-bottom: 30px;
+  }
+
+  .grid-instituicoes {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Animações melhoradas */
+@keyframes pulsar {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.cta-button:hover {
+  animation: pulsar 1s infinite;
+}
+
+/* Acessibilidade melhorada */
+.btn-doar, .cta-button {
+  color: #000; /* Texto mais escuro para maior contraste */
+}
+
+/* Efeito de hover suave */
+.instituicao, .historia, .estatistica {
+  transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.instituicao:hover, .historia:hover, .estatistica:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Toggle de modo escuro */
+.dark-mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background-color var(--transition-speed) ease;
+  z-index: 1000;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #45a049;
+}
+
+/* Tabela financeira */
+.tabela-financeira {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.tabela-financeira th,
+.tabela-financeira td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabela-financeira thead {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.tabela-financeira tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.tabela-financeira tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.tabela-financeira .positivo {
+  color: green;
+}
+
+.tabela-financeira .negativo {
+  color: red;
+}
+
+@media (max-width: 600px) {
+  .tabela-financeira {
+    font-size: 14px;
+  }
+
+  .tabela-financeira th,
+  .tabela-financeira td {
+    padding: 8px 10px;
+  }
+}
