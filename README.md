@@ -78,6 +78,3 @@ Contribuições são sempre bem-vindas! Para contribuir:
     git push origin minha-feature
     ```
 5. Abra um pull request para revisão.
-
-
-#APROVEITE O CÓDIGO! 
